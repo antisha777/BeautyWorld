@@ -14,125 +14,253 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
-                <div class="nav-bar">
-                    <a href="/" class="logo">Мир красоты</a>
-                    <nav class="navigation nav-top">
-                        <ul>
-                            <li><a href="#">Услуги и цены</a></li>
-                            <li><a href="#">Мастера</a></li>
-                            <li><a href="#">Наши работы</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
+                <div class="header__top">
+                    <a href="/" class="logo header__logo">Мир красоты</a>
+                    <nav id="nav" class="navigation header__nav">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a href="#about" class="navigation__link">Услуги и цены</a></li>
+                            <li class="navigation__item"><a href="#masters" class="navigation__link">Мастера</a></li>
+                            <li class="navigation__item"><a href="#price" class="navigation__link">Наши работы</a></li>
+                            <li class="navigation__item"><a href="#portfolio" class="navigation__link">О нас</a></li>
+                            <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
                         </ul>
                     </nav>
-                    <div class="phone-info">
-                        <a href="tel:84996861762">8 (499) 686-17-62</a>
-                        <span>с 10.00 до 19.00 без выходных</span>
+                    <div class="header-phone header__phone">
+                        <a href="tel:84996861762" class="header-phone__number">8 (499) 686-17-62</a>
+                        <time class="header-phone__schedule">с 10.00 до 19.00 без выходных</time>
                     </div>
                 </div>
-                <div class="article-info">
-                    <h1>Создай свой образ вместе с нами</h1>
-                    <p>Идеальный образ за 60 минут</p>
-                    <button class="btn">Записаться онлайн</button>
+                <div class="header__content">
+                    <div class="hero header__hero">
+                        <h1 class="hero__title">Создай свой образ вместе с нами</h1>
+                        <p class="hero__subtitle">Идеальный образ за 60 минут</p>
+                        <button data-fancybox data-src="#request" class="btn btn_large">Записаться онлайн</button>
+                    </div>
+                    <div class="ball"></div>
+                    <div class="girl"><img src="./img/girl.png" alt="fasion-girl"></div>
+                    <ul class="social social_vertical header__social">
+                        <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
+                        <li class="social__item"><a href="#"><img class="social__link"  src="./img/insta.png" alt="Instagram"></a></li>
+                        <li class="social__item"><a href="#"><img class="social__link"  src="./img/You.png" alt="Youtube"></a></li>
+                    </ul>
                 </div>
-                <div class="ball"></div>
-                <div class="girl"><img src="./img/girl.png" alt="fasion-girl"></div>
-                <ul class="social">
-                    <li><a href="#"><img src="./img/vk.png" alt="Vk"></a></li>
-                    <li><a href="#"><img src="./img/insta.png" alt="Instagram"></a></li>
-                    <li><a href="#"><img src="./img/You.png" alt="Youtube"></a></li>
-                </ul>
             </div>
         </header>
         <main class="main">
-            <div class="container">
-                <section class="about-section">
-                    <div class="container-about">
-                        <div class="section-title">
-                            <h2>О салоне</h2>
-                            <p class="text-title">Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
-                            <p class="main-text-title">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
-                            <a href="#" class="expand-text">Развернуть</a>
+            <section class="section">
+                <div class="container">
+                    <div class="section__header">
+                        <h2 class="about-title">О салоне</h2>
+                    </div>
+                    <div class="section__inner">
+                        <div class="about">
+                            <div class="about__content">
+                                <p class="about__text1">Мир красоты - это уютный салон в самом центре города. Здесь работают профессиональные визажисты, стилисты и мастера татуажа</p>
+                                <p class="about__text2">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
+                                <a href="#" class="about__expand">Развернуть</a>
+                            </div>
+                            <div class="video">
+                                <div class="video__overlay"></div>
+                                <img src="img/videoabout.png" alt="video">
+                            </div>
                         </div>
-                        <div class="box-video">
-                            <a href="#"><img class="video-play" src="img/videoabout.png" alt="video"></a>
-                            <img src="img/Group.png" alt="Play" class="btn-play">
-                            <a href="#" class="play-text">Короткое видео о нас</a>
+                        <div class="column about__column">
+                            <div class="column__row">
+                                <img src="./img/iconMirror.svg" alt="icon1" class="column__icon">
+                                <h3 class="column__title">Удобные кабинеты</h3>
+                                <p class="column__text">Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас</p>
+                            </div>
+                            <div class="column__row">
+                                <img src="./img/health-care.svg" alt="icon2" class="column__icon">
+                                <h3 class="column__title">Качественная косметика</h3>
+                                <p class="column__text">Используем профессиональные материалы высшего качества лучших брендов</p>
+                            </div>
+                            <div class="column__row">
+                                <img src="./img/scissors.svg" alt="icon3" class="column__icon">
+                                <h3 class="column__title">Опытные мастера</h3>
+                                <p class="column__text">Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section__header">
+                        <h1 class="services__title">Популярные услуги</h1>
+                    </div>
+                        <div class="services__inner">
+                            <div class="popular-row">
+                                <div class="popular-col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                    <h3 class="popular-title">Маникюр</h3>
+                                    <p class="popular-sabtitle">Аппаратный, комбинированный или классический.</p>
+                                    <button class="btn btn_popular">Записаться</button>
+                                </div>
+                                <div class="popular-col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                    <h3 class="popular-title">Покрытие гель-лак</h3>
+                                    <p class="popular-sabtitle">Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
+                                    <button class="btn btn_popular">Записаться</button>
+                                </div>
+                                <div class="popular-col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                    <h3 class="popular-title">Бразильский маникюр</h3>
+                                    <p class="popular-sabtitle">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
+                                    <button class="btn btn_popular">Записаться</button>
+                                </div>
+                                <div class="popular-col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                    <h3 class="popular-title">Педикюр</h3>
+                                    <p class="popular-sabtitle">Аппаратный, комбинированный или классический.</p>
+                                    <button class="btn btn_popular">Записаться</button>
+                                </div>
+                                <div class="popular-col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                    <h3 class="popular-title">Парафинотерапия</h3>
+                                    <p class="popular-sabtitle">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
+                                    <button class="btn btn_popular">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <div class="section__header">
+                        <h2 class="section__title">Услуги и цены</h2>
+                    </div>
+                    <div class="services__inner">
+                        <div class="tabs">
+                            <nav id="nav" class="navigation tabs-navigation">
+                                <ul class="navigation__list">
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Стрижка и укладка</a></li>
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Косметология</a></li>
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Маникюр и педикюр</a></li>
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Макияж</a></li>
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Брови и ресницы</a></li>
+                                    <li class="navigation__item"><a href="#" class="navigation__link">Массаж</a></li>
+                                </ul>
+                            </nav>
+                            <div class="tabs-info">
+                                <div class="block-left">
+                                    <div class="block">
+                                        <h3 class="block__title">Женская стрижка</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Мужская стрижка</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Детский Стиль</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Креативный Стиль</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                </div>
+                                <div class="block-right">
+                                    <div class="block">
+                                        <h3 class="block__title">Стрижка бороды и усов</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Экспресс укладка</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Укладка дневная</h3>
+                                        <p class="block__money">1200 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                    <div class="block">
+                                        <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                        <p class="block__money">3000 &#x20bd;</p>
+                                        <p class="block__subtitle">Короткие волосы</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                     
+                </div>
+            </section>
+            <section class="section">
+                <div class="section-bg">
+                    <div class="container">
+                        <div class="section__header">
+                            <h2 class="section__title">Мастера</h2>
+                            <p class="master__subtitle">Дружная команда настоящих профессионалов</p>
+                        </div>
+                        <div class="section__inner">
+                            <div class="masters__row">
+                                <div class="masters__col">
+                                    <div class="master">
+                                        <div class="master__overlay">
+                                            <img class="master__img" src="img/master1.png" alt="Ирина">
+                                        </div>
+                                        <div class="master__btn">
+                                            <div class="master__text">Записаться </br> к мастеру</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="masters__name">Краснова Ирина</h3>
+                                    <p class="masters__post">Мастер ногтевого сервиса</p>
+                                    <p class="masters__add">Опыт работы 5 лет</p>
+                                </div>
+                                <div class="masters__col">
+                                    <div class="master">
+                                        <div class="master__overlay">
+                                            <img class="master__img" src="img/master2.png" alt="Жанна">
+                                        </div>
+                                        <div class="master__btn">
+                                            <div class="master__text">Записаться </br> к мастеру</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="masters__name">Калилова Жанна</h3>
+                                    <p class="masters__post">Визажист-стилист</p>
+                                    <p class="masters__add">Опыт работы 5 лет</p>
+                                </div>
+                                <div class="masters__col">
+                                    <div class="master">
+                                        <div class="master__overlay">
+                                            <img class="master__img" src="img/master3.png" alt="Алена">
+                                        </div>
+                                        <div class="master__btn">
+                                            <div class="master__text">Записаться </br> к мастеру</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="masters__name">Киселева Алина</h3>
+                                    <p class="masters__post">Парикмахер</p>
+                                    <p class="masters__add">Опыт работы 5 лет</p>
+                                </div>
+                                <div class="masters__col">
+                                    <div class="master">
+                                        <div class="master__overlay">
+                                            <img class="master__img" src="img/master4.png" alt="Елена">
+                                        </div>
+                                        <div class="master__btn">
+                                            <div class="master__text">Записаться </br> к мастеру</div>
+                                        </div>
+                                    </div>
+                                    <h3 class="masters__name">Иванова Елена</h3>
+                                    <p class="masters__post">Мастер ногтевого сервиса</p>
+                                    <p class="masters__add">Опыт работы 5 лет</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="container-about-one">
-                        <div class="about-wrapper">
-                            <article class="services-info">
-                                <img src="./img/iconMirror.svg" alt="icon1" class="article-icon">
-                                <h3 class="article-icon-title">Удобные кабинеты</h3>
-                                <p class="article-icon-text text">Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас</p>
-                            </article>
-                            <article class="services-info">
-                                <img src="./img/health-care.svg" alt="icon2" class="article-icon">
-                                <h3 class="article-icon-title">Качественная косметика</h3>
-                                <p class="article-icon-text text">Используем профессиональные материалы высшего качества лучших брендов</p>
-                            </article>
-                            <article class="services-info">
-                                <img src="./img/scissors.svg" alt="icon3" class="article-icon">
-                                <h3 class="article-icon-title">Опытные мастера</h3>
-                                <p class="article-icon-text text">Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера</p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-portfolio">
-                    <h1>Популярные услуги</h1>
-                    <div class="popular-wrap">
-                        <div class="pop-inner-first">
-                            <div class="box-info-pop">
-                                <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
-                                <h3 >Маникюр</h3>
-                                <p>Аппаратный, комбинированный или классический.</p>
-                                <button class="btn popular-btn">Записаться</button>
-                            </div>
-                            <div class="box-info-pop">
-                                <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
-                                <h3 >Покрытие гель-лак</h3>
-                                <p>Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
-                                <button class="btn popular-btn">Записаться</button>
-                            </div>
-                            <div class="box-info-pop">
-                                <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
-                                <h3 >Бразильский маникюр</h3>
-                                <p>Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                <button class="btn popular-btn">Записаться</button>
-                            </div>
-                        </div>
-                        <div class="pop-inner-second">
-                            <div class="box-info-pop">
-                                <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
-                                <h3 >Педикюр</h3>
-                                <p>Аппаратный, комбинированный или классический.</p>
-                                <button class="btn popular-btn">Записаться</button>
-                            </div>
-                            <div class="box-info-pop">
-                                <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
-                                <h3 >Парафинотерапия</h3>
-                                <p>Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
-                                <button class="btn popular-btn">Записаться</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="price section-title">
-                    <h2>Услуги и цены</h2>
-                </section>
-                <nav class="navigation nav-price">
-                    <ul>
-                        <li><a href="#">Стрижка и укладка</a></li>
-                        <li><a href="#">Косметология</a></li>
-                        <li><a href="#">Маникюр и педикюр</a></li>
-                        <li><a href="#">Макияж</a></li>
-                        <li><a href="#">Брови и ресницы</a></li>
-                        <li><a href="#">Массаж</a></li>
-                    </ul>
-                </nav>
-            </div>
+                </div>
+            </section>
+            <section class="section"></section>
+            <section class="section"></section>
+            <section class="section"></section> 
         </main>
         <footer class="footer">
             <div class="container">
