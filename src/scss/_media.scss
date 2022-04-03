@@ -2,39 +2,76 @@
 } 
 /* Medium Devices, Desktops */ 
 @media only screen and (max-width: 992px) { 
+    
 } 
 /* Small Devices, Tablets */ 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
+
     .header__top {
-        flex-direction: column;
-        gap: 20px;
-        
+        padding: 0 15px 0 70px;
+    }
+    
+    .hero__social {
+        margin-top: 20px;
+        position: absolute;
+        transform: translateX(50%);
+        right: 50%;
     }
 
-    .phone-info {
+    .header__menu {
+        display: none;
+    }
+
+    .contact-form {
+        order: -1;
+    }
+
+    .section__header {
         text-align: center;
     }
 
-    .header__logo, .navigation, .header-phone {
-        margin: auto;
-    }
-
-    .navigation {
-        flex-direction: column;
-    }
-
-    .navigation__list {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navigation__item:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .about, .row, .tabs-info, .section__header_stretch {
+        justify-content: space-evenly;
     }
 } 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 480px) {
+
+    .container {
+        // position: relative;
+        // padding: 30px 0 130px;
+        padding-top: 20px;
+    }
+    
+    .header__top {
+        flex-direction: column;
+        padding: 0 15px;
+        margin-bottom: 60px;
+    }
+
+    .header__mobile {
+        top: 40px;
+    }
+
+    .logo {
+        padding-bottom: 20px;
+    }
+
+
 } 
 /* Custom, iPhone Retina */ 
 @media only screen and (max-width: 320px) { 
+}
+
+@media only screen and (min-width: 768px) {
+    .burger, .hero__social {
+        display: none;
+    }
+}
+
+@media print {
+    .headrer, .section__grey   {
+        background: none;
+    } 
+
 }

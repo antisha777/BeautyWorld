@@ -14,16 +14,25 @@
         <header class="header">
             <div class="container">
                 <div class="header__top">
+                    <div class="burger header__mobile">
+                        <a href="#" class="burger__col">
+                            <span class="burger__buttom"></span>
+                        </a>
+                    </div>
                     <a href="/" class="logo header__logo">Мир красоты</a>
-                    <nav id="nav" class="navigation header__nav">
-                        <ul class="navigation__list">
-                            <li class="navigation__item"><a href="#about" class="navigation__link">Услуги и цены</a></li>
-                            <li class="navigation__item"><a href="#masters" class="navigation__link">Мастера</a></li>
-                            <li class="navigation__item"><a href="#price" class="navigation__link">Наши работы</a></li>
-                            <li class="navigation__item"><a href="#portfolio" class="navigation__link">О нас</a></li>
-                            <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
-                        </ul>
-                    </nav>
+                    <div class="header__content"></div>
+                    <div class="header__menu">
+                        <nav id="nav" class="navigation  header__nav header__nav_none">
+                            <ul class="navigation__list">
+                                <li class="navigation__item"><a href="#about" class="navigation__link">Услуги и цены</a></li>
+                                <li class="navigation__item"><a href="#masters" class="navigation__link">Мастера</a></li>
+                                <li class="navigation__item"><a href="#price" class="navigation__link">Наши работы</a></li>
+                                <li class="navigation__item"><a href="#portfolio" class="navigation__link">О нас</a></li>
+                                <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
                     <div class="header-phone">
                         <a href="tel:84996861762" class="header-phone__number">8 (499) 686-17-62</a>
                         <time class="header-phone__schedule">с 10.00 до 19.00 без выходных</time>
@@ -34,8 +43,15 @@
                         <h1 class="hero__title">Создай свой образ вместе с нами</h1>
                         <p class="hero__subtitle">Идеальный образ за 60 минут</p>
                         <button data-fancybox data-src="#request" class="btn btn_large">Записаться онлайн</button>
+                        <div class="hero__social">
+                            <ul class="social social_horizon">
+                                <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
+                                <li class="social__item"><a href="#"><img class="social__link"  src="./img/insta.png" alt="Instagram"></a></li>
+                                <li class="social__item"><a href="#"><img class="social__link"  src="./img/You.png" alt="Youtube"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="girl"><img src="./img/hero_girl.png" alt="fasion-girl"></div>
+                    <div class="header__girl"><img src="./img/hero_girl.png" alt="fasion-girl"></div>
                     <ul class="social social_vertical header__social">
                         <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
                         <li class="social__item"><a href="#"><img class="social__link"  src="./img/insta.png" alt="Instagram"></a></li>
@@ -132,7 +148,7 @@
                     </div>
                     <div class="services__inner">
                         <div class="tabs">
-                            <nav id="nav" class="navigation tabs-navigation">
+                            <nav class="navigation tabs-navigation">
                                 <ul class="navigation__list">
                                     <li class="navigation__item"><a href="#" class="navigation__link">Стрижка и укладка</a></li>
                                     <li class="navigation__item"><a href="#" class="navigation__link">Косметология</a></li>
@@ -362,7 +378,7 @@
                         <a class="footer-inner__police" href="#">Политика конфиденциальности</a>
                     </div>
                     <div class="footer-inner__right">
-                        <nav id="nav" class="navigation">
+                        <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__item"><a href="#about" class="navigation__link link-size">Услуги и цены</a></li>
                                 <li class="navigation__item"><a href="#masters" class="navigation__link link-size">Мастера</a></li>
