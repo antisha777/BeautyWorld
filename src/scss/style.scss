@@ -154,6 +154,10 @@
         font-size: 48px;
         font-weight: 600;
         padding-bottom: 20px;
+
+        @include _480() {
+            padding: 20px;
+        }
     }
 
     &__subtitle {
@@ -235,6 +239,7 @@
 
 .section {
     padding: 50px 0;
+    overflow: hidden;
 
     &__header {
 
@@ -553,6 +558,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include _620() {
+        gap: 50px;
+    }
+
     &_space-between {
         justify-content: space-between;
     }
@@ -687,8 +696,6 @@
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-start;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 
@@ -861,6 +868,8 @@
     z-index: 999;
     left: 15px;
     justify-content: space-between;
+    width: 40px;
+    height: 40px;
 
     &__buttom {
         content: "";
