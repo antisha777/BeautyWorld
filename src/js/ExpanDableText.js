@@ -34,7 +34,7 @@ class ExpandableText {
   } 
    
   _getShortText() { 
-    return (this.originalText.slice(0, this.maxLength)) + '...'; 
+    return (this.originalText.slice(0, this.maxLength)); 
   } 
 } 
 
@@ -42,6 +42,6 @@ window.onload = () => {
   const textElems = document.querySelectorAll('.expandable-text'); 
    
   for (const el of textElems) { 
-    new ExpandableText(el, 324); 
+    new ExpandableText(el, 362); 
   } 
 }

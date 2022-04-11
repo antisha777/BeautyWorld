@@ -42,6 +42,10 @@
             align-items: center;
         }
 
+        @include _480() {
+            margin-bottom: 60px;
+        }
+
     }
 
     &__logo {
@@ -88,12 +92,44 @@
             justify-content: center;
         }
     }
+
+    &__mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+
+        @include _768() {
+            padding-left: 60px;
+        }
+
+        @include _480() {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 0;
+        }
+    }
+
+    &__menu {
+
+        @include _992() {
+            max-width: 400px;
+        }
+    }
 }
 
 .navigation {
 
     &__item:not(:last-child) {
     margin-right: 28px;
+    }
+
+    &__item {
+        font-size: 14px;
+        font-weight: 600;
+        transition: .15s color;
+        color: $black;
     }
 
     &__list {
@@ -103,7 +139,6 @@
         display: flex;
         
         @include _992() {
-            max-width: 400px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -255,7 +290,7 @@
         font-weight: 700;
         font-size: 48px;
         font-weight: 700;
-        margin-bottom: 35px;
+        // margin-bottom: 35px;
 
         @include _480 () {
             font-size: 36px;
@@ -355,12 +390,23 @@
         font-size: 16px;
         line-height: 26px;
         padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__expand {
         color: $blue;
         font-size: 14px;
     }
+}
+
+.expandable-text button {
+    max-width: 150px;
+    text-align: start;
+    padding: 0;
+    color: #278aff;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 .video {
@@ -506,9 +552,14 @@
 
 /*popular*/
 
-.tabs-navigation {
-    margin-bottom: 55px;
-}
+// .tabs__navigation {
+//     margin-bottom: 55px;
+
+//     @include _768() {
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//     }
+// }
 
 .tabs-navigation li:active, .tabs-navigation li:visited {
     border-bottom: 2px solid #00BF78;
@@ -535,7 +586,35 @@
     }
 }
 
-.tabs-info {
+.tabs { 
+    
+    &__links { 
+      .active { 
+        color: $green;
+        padding-bottom: 5px;
+        border-bottom: #00BF78 2px solid;        
+      } 
+    } 
+     
+    &__item { 
+      display: none; 
+       
+      &.active { 
+        display: contents; 
+      } 
+    }
+
+    &__navigation {
+        margin-bottom: 55px;
+    
+        @include _768() {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+  }
+
+.tabs__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -558,12 +637,16 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include _620() {
+    @include _1165() {
         gap: 50px;
     }
 
     &_space-between {
         justify-content: space-between;
+
+        @include _811() {
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -691,7 +774,7 @@
     }
 }
 
-.slider-col {
+.slider {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -700,16 +783,60 @@
 
 
 .slid {
-    max-width: 340px;
-    max-height: 340px;
+    width: 25%;
+    margin: 0 15px;
     cursor: pointer;
     position: relative;
     text-align: end;
     border-radius: 8px;
-    // overflow: hidden;
     z-index: 2;
 
+    // &::before {
+    //     content: 'Увеличить';
+    //     position: absolute;
+    //     width: 60px;
+    //     height: 60px;
+    //     top: 100px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     background: url('../img/play.png') no-repeat center;
+    //     z-index: 9;
+    //     transition: .15ms;
+    //     opacity: 1;
+    // }
+
+    &__btn {
+            content: 'Увеличить';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url('../img/play.png') no-repeat center;
+            z-index: 9;
+            transition: .15ms;
+            // opacity: 0;
+        
+
+            &:hover {
+                // content: 'Увеличить';
+                // position: absolute;
+                // width: 60px;
+                // height: 60px;
+                // top: 100px;
+                // left: 50%;
+                // transform: translateX(-50%);
+                // background: url('../img/play.png') no-repeat center;
+                z-index: 9;
+                // transition: .15ms;
+                opacity: 1;
+            }
+        
+        }
+
     &__overlay {
+        width: 100%;
         background: #000;
         opacity: 0;
         position: absolute;
@@ -731,12 +858,42 @@
         top: 0;
         bottom: 0;
         z-index: 5;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            top: 40%;
+            left: 50%;
+            right: 0;
+            transform: translateX(-50%);
+            background: url('../img/loupe.png') no-repeat center;
+            z-index: 9;
+            opacity: 1;
+        }
+
+        &::after {
+            content: 'Увеличить';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            position: absolute;
+            text-align: center;
+            width: 80px;
+            height: 20px;
+            z-index: 9;
+            top: 60%;
+            left: 50%;
+            right: 0;
+            transform: translateX(-50%);
+            color: #fff;
+            opacity: 1;
+        }
     }
 
     &__img {
-
-        max-width: 340px;
-        max-height: 340px;
+        width: 100%;
     }
     
 }
@@ -749,6 +906,9 @@
     }   
 }
 
+.slick-list {
+    overflow: inherit !important;
+}
 
 /* brands */
 
@@ -861,18 +1021,26 @@
     font-weight: 400;
 }
 
-.burger {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-    left: 15px;
-    justify-content: space-between;
-    width: 40px;
-    height: 40px;
+// Мобильное меню
+
+.mobile-menu {
+    position: relative;
+
+    &__burger {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 25px;
+        left: 15px;
+        z-index: 999;
+    }
 
     &__buttom {
-        content: "";
+        position: absolute;
+        // content: "";
         transition: 0.3s;
         display: block;
         background-color: #727272;
@@ -881,7 +1049,6 @@
         border-radius: 8px;
 
         &::before {
-            transform: translateY(10px);
             content: "";
             transition: 0.3s;
             position: absolute;
@@ -889,10 +1056,10 @@
             width: 40px;
             height: 4px;
             border-radius: 8px;
+            transform: translateY(-10px);
         }
 
         &::after {
-            transform: translateY(-10px);
             content: "";
             transition: 0.3s;
             position: absolute;
@@ -900,8 +1067,74 @@
             width: 40px;
             height: 4px;
             border-radius: 8px;
+            transform: translateY(10px);
         }
     }
+}
+
+.bar-menu {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient( 360deg ,transparent,#fff);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+}
+
+// Гамбургер анимация
+
+.menu-btn-active span {
+	background: none;
+
+    &::before {
+	transform: rotate(45deg);
+    }
+
+    &::after {
+	transform: rotate(-45deg);
+    }
+}
+
+.links-menu {
+	z-index: 50;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	top: -100%;
+    left: 0;
+	transition: .5s;
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+	overflow-y: auto;
+    z-index: 99;
+    margin: 0;
+}
+
+.links-menu-active {
+	top: 0;
+}
+
+.links-menu {
+    &__item {
+        list-style: none;
+        padding-bottom: 30px;
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 600;
+        transition: .15s color;
+        color: $black;
+
+        &:hover {
+            color: $green;
+        }
+    }    
 }
 
 @import "./media";

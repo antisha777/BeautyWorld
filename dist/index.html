@@ -8,35 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 </head>
 <body>
     <div class="wrapper">
+<!-------------------------section heade------------------------->
         <header class="header">
             <div class="container">
                 <div class="header__top">
-                    <div class="burger header__mobile">
-                        <a href="#" class="burger__col">
-                            <span class="burger__buttom"></span>
+                    <div class="mobile-menu">
+                        <div id="bar" class="bar-menu"></div>
+                        <a href="#" class="mobile-menu__burger menu-btn-mobile">
+                            <span class="mobile-menu__buttom"></span>
                         </a>
+                        <ul class="links-menu menu-btn-active">
+                            <li class="links-menu__item"><a href="#price" class="links-menu__link">Услуги и цены</a></li>
+                            <li class="links-menu__item"><a href="#masters" class="links-menu__link">Мастера</a></li>
+                            <li class="links-menu__item"><a href="#portfolio" class="links-menu__link">Наши работы</a></li>
+                            <li class="links-menu__item"><a href="#about" class="links-menu__link">О нас</a></li>
+                            <li class="links-menu__item"><a href="#contacts" class="links-menu__link">Контакты</a></li>
+                        </ul>
                     </div>
-                    <a href="/" class="logo header__logo">Мир красоты</a>
-                    <div class="header__content"></div>
+                    <div class="header__mobile">
+                        <a href="/" class="logo header__logo">Мир красоты</a>
                     <div class="header__menu">
                         <nav id="nav" class="navigation  header__nav header__nav_none">
                             <ul class="navigation__list">
-                                <li class="navigation__item"><a href="#about" class="navigation__link">Услуги и цены</a></li>
+                                <li class="navigation__item"><a href="#price" class="navigation__link">Услуги и цены</a></li>
                                 <li class="navigation__item"><a href="#masters" class="navigation__link">Мастера</a></li>
-                                <li class="navigation__item"><a href="#price" class="navigation__link">Наши работы</a></li>
-                                <li class="navigation__item"><a href="#portfolio" class="navigation__link">О нас</a></li>
+                                <li class="navigation__item"><a href="#portfolio" class="navigation__link">Наши работы</a></li>
+                                <li class="navigation__item"><a href="#about" class="navigation__link">О нас</a></li>
                                 <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>
-                    
                     <div class="header-phone">
                         <a href="tel:84996861762" class="header-phone__number">8 (499) 686-17-62</a>
                         <time class="header-phone__schedule">с 10.00 до 19.00 без выходных</time>
                     </div>
+                </div>
                 </div>
                 <div class="header__content">
                     <div class="hero header__hero">
@@ -61,7 +73,8 @@
             </div>
         </header>
         <main class="main">
-            <section class="section">
+<!-------------------------section about------------------------->
+            <section id="about" class="section">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="about-title">О салоне</h2>
@@ -73,13 +86,13 @@
                                 <div class="expandable-text about__text2">
                                     Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio soluta temporibus aspernatur error, officiis laborum sint doloribus nemo, architecto exercitationem consequatur! Minima consequatur quasi distinctio adipisci laborum, nobis eos molestias.
                                 </div>
-                                <!-- <p class="about__text2">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас.</p>
-                                <a href="#" class="about__expand">Развернуть</a> -->
                             </div>
-                            <div class="video">
-                                <div class="video__overlay"></div>
-                                <img src="img/videoabout.png" alt="video">
-                            </div>
+                            <a data-fancybox href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
+                                <div class="video">
+                                    <div class="video__overlay"></div>
+                                    <img src="img/videoabout.png" alt="video">
+                                </div>
+                            </a>
                         </div>
                         <div class="about__inner">
                             <div class="row about-row">
@@ -103,6 +116,7 @@
                     </div>                    
                 </div>
             </section>
+<!-------------------------section popular------------------------->
             <section class="section">
                 <div class="container">
                     <div class="section__header">
@@ -144,15 +158,16 @@
                         </div>
                 </div>
             </section>
-            <section class="section">
+ <!-------------------------section price------------------------->
+            <section id="price" class="section">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Услуги и цены</h2>
                     </div>
                     <div class="services__inner">
-                        <div class="tabs">
-                            <nav class="navigation tabs-navigation">
-                                <ul class="navigation__list">
+                        <!-- <div id="myTabs" class="tabs">
+                            <nav class="navigation tabs__navigation">
+                                <ul class="tabs__link navigation__list">
                                     <li class="navigation__item"><a href="#" class="navigation__link">Стрижка и укладка</a></li>
                                     <li class="navigation__item"><a href="#" class="navigation__link">Косметология</a></li>
                                     <li class="navigation__item"><a href="#" class="navigation__link">Маникюр и педикюр</a></li>
@@ -161,58 +176,581 @@
                                     <li class="navigation__item"><a href="#" class="navigation__link">Массаж</a></li>
                                 </ul>
                             </nav>
-                            <div class="tabs-info">
-                                <div class="block-left">
-                                    <div class="block">
-                                        <h3 class="block__title">Женская стрижка</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                            <div class="tabs__content"> 
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Мужская стрижка</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
-                                    </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Детский Стиль</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
-                                    </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Креативный Стиль</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="block-right">
-                                    <div class="block">
-                                        <h3 class="block__title">Стрижка бороды и усов</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Экспресс укладка</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Укладка дневная</h3>
-                                        <p class="block__money">1200 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
-                                    <div class="block">
-                                        <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
-                                        <p class="block__money">3000 &#x20bd;</p>
-                                        <p class="block__subtitle">Короткие волосы</p>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1100 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1100 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1100 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1100 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>                     
+                        </div> -->
+                        <div id="myTabs" class="tabs">
+                            <nav class="navigation tabs__navigation">
+                              <ul class="navigation__list tabs__links "> 
+                                <li class="navigation__item">Стрижка и укладка<a class="navigation__link"></a></li> 
+                                <li class="navigation__item">Косметология<a class="navigation__link"></a></li> 
+                                <li class="navigation__item"><a class="navigation__link">Маникюр и педикюр</a></li>
+                                <li class="navigation__item"><a class="navigation__link">Макияж</a></li>
+                                <li class="navigation__item"><a class="navigation__link">Брови и ресницы</a></li>
+                                <li class="navigation__item"><a class="navigation__link">Массаж</a></li>
+                              </ul>
+                            </nav>
+                            <div class="tabs__content"> 
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1300 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Женская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Мужская стрижка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
+                                            <p class="block__money">3000 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                </div>                              
+                            </div> 
+                          </div>
+                    </div>                    
                 </div>
             </section>
+<!-------------------------section masters------------------------->
             <section class="section">
-                <div class="section__grey section__grey_masters">
+                <div id="masters" class="section__grey section__grey_masters">
                     <div class="container">
                         <div class="section__header">
                             <h2 class="section__title">Мастера</h2>
@@ -275,43 +813,54 @@
                     </div>
                 </div>
             </section>
-            <section class="section">
+<!-------------------------section portfolio------------------------->
+            <section id="portfolio" class="section">
                 <div class="container">
                     <div class="section__header section__header_stretch">
                         <h2 class="section__title">Наши работы</h2>
                         <div class="switch">
                             <div class="switch__action">
-                                <div class="switch__prev switch__prev_view"><img src="img/btnl.png" alt="Назад" class="switch__btnl"></div>
-                                <div class="switch__next switch__prev_view"><img src="img/btnr.png" alt="Вперед" class="switch__btnr"></div>
+                                <button class="switch__prev switch__prev_view"><img src="img/btnl.png" alt="Назад" class="switch__btnl"></button  >
+                                <button  class="switch__next switch__prev_view"><img src="img/btnr.png" alt="Вперед" class="switch__btnr"></button >
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slider-row">
-                    <div class="slider-col">
+                    <div class="slider">
                         <div class="slid scale">
-                            <div class="slid__overlay"></div>
-                            <img class="slid__img img scale" src="img/slid-1.png" alt="Ирина">
-                            <div class="slid__btn">Увеличить</div>
+                            <a data-fancybox="gallery" href="img/slid-1.png">
+                                <div class="slid__overlay"></div>
+                                <img class="slid__img img" src="img/slid-1.png" alt="Ирина">
+                                <!-- <div class="slid__btn">Увеличить</div> -->
+                            </a>
                         </div>
                         <div class="slid scale">
+                            <a data-fancybox="gallery" href="img/slid-2.png">
+                                <img class="slid__img img" src="img/slid-2.png" alt="Ирина">
+                            </a>
                             <div class="slid__overlay"></div>
-                            <img class="slid__img scale" src="img/slid-2.png" alt="Ирина">
-                            <div class="slid__btn">Увеличить</div>
+                            <!-- <div class="slid__btn">Увеличить</div> -->
                         </div>
                         <div class="slid scale">
                             <div class="slid__overlay"></div>
                             <img class="slid__img" src="img/slid-3.png" alt="Ирина">
-                            <div class="slid__btn">Увеличить</div>
+                            <!-- <div class="slid__btn">Увеличить</div> -->
                         </div>    
                         <div class="slid scale">
                             <div class="slid__overlay"></div>
                             <img class="slid__img" src="img/slid-4.png" alt="Ирина">
-                            <div class="slid__btn">Увеличить</div>
+                            <!-- <div class="slid__btn">Увеличить</div> -->
+                        </div>
+                        <div class="slid scale">
+                            <div class="slid__overlay"></div>
+                            <img class="slid__img" src="img/slid-4.png" alt="Ирина">
+                            <!-- <div class="slid__btn">Увеличить</div> -->
                         </div>
                     </div>
                 </div>
             </section>
+<!-------------------------section brends------------------------->
             <section class="section">
                 <div class="container">
                     <div class="section__header">
@@ -328,7 +877,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section-bottom">
+\<!-------------------------section contacts, form------------------------->
+            <section id="contacts" class="section-bottom">
                 <div class="section__grey section__grey_contacts">
                     <div class="container-contacts">
                         <div class="container-contacts_wight">
@@ -373,6 +923,7 @@
                 </div>
             </section>  
         </main>
+<!-------------------------section footer------------------------->
         <footer class="footer">
             <div class="container">
                 <div class="footer-inner">
@@ -383,9 +934,9 @@
                     <div class="footer-inner__right">
                         <nav class="navigation">
                             <ul class="navigation__list">
-                                <li class="navigation__item"><a href="#about" class="navigation__link link-size">Услуги и цены</a></li>
+                                <li class="navigation__item"><a href="#price" class="navigation__link link-size">Услуги и цены</a></li>
                                 <li class="navigation__item"><a href="#masters" class="navigation__link link-size">Мастера</a></li>
-                                <li class="navigation__item"><a href="#price" class="navigation__link link-size">Наши работы</a></li>
+                                <li class="navigation__item"><a href="#portfolio" class="navigation__link link-size">Наши работы</a></li>
                                 <li class="navigation__item"><a href="#contacts" class="navigation__link link-size">Контакты</a></li>
                             </ul>
                         </nav>
@@ -394,6 +945,15 @@
             </div>
         </footer>
     </div>
-</body>
+<!--------------------------------scripts------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./js/ExpanDableText.js"></script>
+<script src="./js/mobileMenu.js"></script>
+<script src="./js/smoothScroll.js"></script>
+<script src="./js/slick.js"></script>
+<script src="./js/barMenu.js"></script>
+<script src="./js/tabs.js"></script>
+</body>
 </html>
