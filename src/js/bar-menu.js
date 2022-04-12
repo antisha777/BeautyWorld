@@ -3,4 +3,4 @@ window.addEventListener('scroll',(event) => {
     const y = scrollY;
     if (y<100) { elem.style.display = "none"}
     else { elem.style.display = "block"};
-    });
+});

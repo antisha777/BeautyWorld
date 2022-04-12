@@ -34,7 +34,7 @@ class ExpandableText {
   } 
    
   _getShortText() { 
-    return (this.originalText.slice(0, this.maxLength)); 
+    return (this.originalText.slice(0, this.maxLength));
   } 
 } 
 

@@ -130,6 +130,7 @@
         font-weight: 600;
         transition: .15s color;
         color: $black;
+        cursor: pointer;
     }
 
     &__list {
@@ -605,7 +606,7 @@
     }
 
     &__navigation {
-        margin-bottom: 55px;
+        margin-bottom: 15px;
     
         @include _768() {
             flex-wrap: wrap;
@@ -618,6 +619,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include _768() {
+        justify-content: space-evenly;
+    }
 }
 
 .block-left, .block-right {
@@ -813,7 +818,7 @@
             top: 100px;
             left: 50%;
             transform: translateX(-50%);
-            background: url('../img/play.png') no-repeat center;
+            background: url('../img/loop.png') no-repeat center;
             z-index: 9;
             transition: .15ms;
             // opacity: 0;
@@ -868,7 +873,7 @@
             left: 50%;
             right: 0;
             transform: translateX(-50%);
-            background: url('../img/loupe.png') no-repeat center;
+            background: url('../img/loop.png') no-repeat center;
             z-index: 9;
             opacity: 1;
         }
@@ -894,6 +899,11 @@
 
     &__img {
         width: 100%;
+        background: no-repeat;
+        background-size: cover;
+        text-align: end;
+        border-radius: 8px;
+        overflow: hidden;
     }
     
 }
