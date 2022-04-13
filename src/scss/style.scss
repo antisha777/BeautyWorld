@@ -553,6 +553,15 @@
 
 /*popular*/
 
+// .tabs__navigation {
+//     margin-bottom: 55px;
+
+//     @include _768() {
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//     }
+// }
+
 .tabs-navigation li:active, .tabs-navigation li:visited {
     border-bottom: 2px solid #00BF78;
   }
@@ -786,6 +795,20 @@
     text-align: end;
     border-radius: 8px;
     z-index: 2;
+
+    // &::before {
+    //     content: 'Увеличить';
+    //     position: absolute;
+    //     width: 60px;
+    //     height: 60px;
+    //     top: 100px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     background: url('../img/play.png') no-repeat center;
+    //     z-index: 9;
+    //     transition: .15ms;
+    //     opacity: 1;
+    // }
 
     &__btn {
             content: 'Увеличить';
