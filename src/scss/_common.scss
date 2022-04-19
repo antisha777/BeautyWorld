@@ -28,4 +28,25 @@ button {
     outline: none;
     cursor: pointer;
     background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.but-effect:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -80px;
+    transform: skewX(-45deg);
+}
+.but-effect:hover {
+    background: $orange;
+    color: #fff;
+}
+.but-effect:hover:before {
+    left: 100%;
+    transition: .5s ease-in-out;
 }

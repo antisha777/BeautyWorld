@@ -18,12 +18,12 @@
         <header class="header">
             <div class="container">
                 <div class="header__top">
-                    <div class="mobile-menu">
+                    <div class="white-stripe">
                         <div id="bar" class="bar-menu"></div>
-                        <a href="#" class="mobile-menu__burger menu-btn-mobile">
-                            <span class="mobile-menu__buttom"></span>
-                        </a>
-                        <ul class="links-menu menu-btn-active">
+                    </div>
+                    <div class="mobile-menu">
+                        <div class="bar mobile-menu__burger"></div>
+                        <ul  class="links-menu">
                             <li class="links-menu__item"><a href="#price" class="links-menu__link">Услуги и цены</a></li>
                             <li class="links-menu__item"><a href="#masters" class="links-menu__link">Мастера</a></li>
                             <li class="links-menu__item"><a href="#portfolio" class="links-menu__link">Наши работы</a></li>
@@ -54,7 +54,7 @@
                     <div class="hero header__hero">
                         <h1 class="hero__title">Создай свой образ вместе с нами</h1>
                         <p class="hero__subtitle">Идеальный образ за 60 минут</p>
-                        <button data-fancybox data-src="#request" class="btn btn_large">Записаться онлайн</button>
+                        <button data-fancybox data-src="#request" class="btn btn_large but-effect">Записаться онлайн</button>
                         <div class="hero__social">
                             <ul class="social social_horizon">
                                 <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
@@ -63,7 +63,10 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="header__girl"><img src="./img/hero_girl.png" alt="fasion-girl"></div>
+                    <div class="header__girl">
+                        <div class="header__ball"></div>
+                        <img class="header__img" src="./img/hero_girl.png" alt="fasion-girl">
+                    </div>
                     <ul class="social social_vertical header__social">
                         <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
                         <li class="social__item"><a href="#"><img class="social__link"  src="./img/insta.png" alt="Instagram"></a></li>
@@ -87,7 +90,7 @@
                                     Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму, а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – вместе с Вами и для Вас. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio soluta temporibus aspernatur error, officiis laborum sint doloribus nemo, architecto exercitationem consequatur! Minima consequatur quasi distinctio adipisci laborum, nobis eos molestias.
                                 </div>
                             </div>
-                            <a data-fancybox href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
+                            <a class="video" data-fancybox href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
                                 <div class="video">
                                     <div class="video__overlay"></div>
                                     <img src="img/videoabout.png" alt="video">
@@ -116,68 +119,68 @@
                     </div>                    
                 </div>
             </section>
-<!-------------------------section popular------------------------->
+<!-------------------------section popular----------------------->
             <section class="section">
                 <div class="container">
                     <div class="section__header">
                         <h1 class="section__title">Популярные услуги</h1>
                     </div>
-                        <div class="services__inner">
-                            <div class="row popular-row">
-                                <div class="column popular-col">
+                        <div class="services__inner popular">
+                            <div class="row popular__row">
+                                <div class="column popular__col">
                                     <img src="./img/popularimg.png" alt="маникюр" class="column__img">
                                     <h3 class="column__title">Маникюр</h3>
                                     <p class="column__subtitle subtitle_bottom">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn btn_popular">Записаться</button>
+                                    <button class="btn btn_popular but-effect">Записаться</button>
                                 </div>
-                                <div class="column popular-col">
+                                <div class="column popular__col">
                                     <img src="./img/popularimg.png" alt="маникюр" class="column__img">
                                     <h3 class="column__title">Покрытие гель-лак</h3>
                                     <p class="column__subtitle subtitle_bottom">Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
-                                    <button class="btn btn_popular">Записаться</button>
+                                    <button class="btn btn_popular but-effect">Записаться</button>
                                 </div>
-                                 <div class="column popular-col">
+                                 <div class="column popular__col">
                                     <img src="./img/popularimg.png" alt="маникюр" class="column__img">
                                     <h3 class="column__title">Бразильский маникюр</h3>
                                     <p class="column__subtitle subtitle_bottom">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                    <button class="btn btn_popular">Записаться</button>
+                                    <button class="btn btn_popular but-effect">Записаться</button>
                                 </div>
-                                <div class="column popular-col">
+                                <div class="column popular__col">
                                     <img src="./img/popularimg.png" alt="маникюр" class="column__img">
                                     <h3 class="column__title">Педикюр</h3>
                                     <p class="column__subtitle subtitle_bottom">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn btn_popular">Записаться</button>
+                                    <button class="btn btn_popular but-effect">Записаться</button>
                                 </div>
-                                <div class="column popular-col">
-                                    <img src="./img/popularimg.png" alt="маникюр" class="popular-img">
+                                <div class="column popular__col">
+                                    <img src="./img/popularimg.png" alt="маникюр" class="column__img">
                                     <h3 class="column__title">Парафинотерапия</h3>
                                     <p class="column__subtitle subtitle_bottom">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
-                                    <button class="btn btn_popular">Записаться</button>
+                                    <button class="btn btn_popular but-effect">Записаться</button>
                                 </div>
                             </div>
                         </div>
                 </div>
             </section>
- <!-------------------------section price------------------------->
+<!-------------------------section price------------------------->
             <section id="price" class="section">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Услуги и цены</h2>
                     </div>
-                    <div class="services__inner">
-                        
+                    <div class="services__inner">    
                         <div id="myTabs" class="tabs">
                             <nav class="navigation tabs__navigation">
                               <ul class="navigation__list tabs__links "> 
                                 <li class="navigation__item">Стрижка и укладка<a class="navigation__link"></a></li> 
                                 <li class="navigation__item">Косметология<a class="navigation__link"></a></li> 
-                                <li class="navigation__item"><a class="navigation__link">Маникюр и педикюр</a></li>
-                                <li class="navigation__item"><a class="navigation__link">Макияж</a></li>
-                                <li class="navigation__item"><a class="navigation__link">Брови и ресницы</a></li>
-                                <li class="navigation__item"><a class="navigation__link">Массаж</a></li>
+                                <li class="navigation__item">Маникюр и педикюр<a class="navigation__link"></a></li>
+                                <li class="navigation__item">Макияж<a class="navigation__link"></a></li>
+                                <li class="navigation__item">Брови и ресницы<a class="navigation__link"></a></li>
+                                <li class="navigation__item">Массаж<a class="navigation__link"></a></li>
                               </ul>
                             </nav>
                             <div class="tabs__content"> 
+                                <!-- Стрижка и укладка -->
                                 <div class="tabs__item">
                                     <div class="block-left">
                                         <div class="block">
@@ -224,6 +227,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Косметология -->
                                 <div class="tabs__item">
                                     <div class="block-left">
                                         <div class="block">
@@ -270,6 +274,54 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Маникюр и педикюр -->
+                                <div class="tabs__item">
+                                    <div class="block-left">
+                                        <div class="block">
+                                            <h3 class="block__title">Классический</h3>
+                                            <p class="block__money">400 &#x20bd;</p>
+                                            <p class="block__subtitle">Женский</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Классический</h3>
+                                            <p class="block__money">500 &#x20bd;</p>
+                                            <p class="block__subtitle">Мужской</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Детский Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Креативный Стиль</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                    </div>
+                                    <div class="block-right">
+                                        <div class="block">
+                                            <h3 class="block__title">Стрижка бороды и усов</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Экспресс укладка</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Укладка дневная</h3>
+                                            <p class="block__money">1200 &#x20bd;</p>
+                                            <p class="block__subtitle">Короткие волосы</p>
+                                        </div>
+                                        <div class="block">
+                                            <h3 class="block__title">Spa</h3>
+                                            <p class="block__money">2990 &#x20bd;</p>
+                                            <p class="block__subtitle">Маникюр и педикюр</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Макияж -->
                                 <div class="tabs__item">
                                     <div class="block-left">
                                         <div class="block">
@@ -316,52 +368,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tabs__item">
-                                    <div class="block-left">
-                                        <div class="block">
-                                            <h3 class="block__title">Женская стрижка</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Мужская стрижка</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Детский Стиль</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Креативный Стиль</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                    </div>
-                                    <div class="block-right">
-                                        <div class="block">
-                                            <h3 class="block__title">Стрижка бороды и усов</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Экспресс укладка</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Укладка дневная</h3>
-                                            <p class="block__money">1200 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title">Прическа вечерняя (свадебная)</h3>
-                                            <p class="block__money">3000 &#x20bd;</p>
-                                            <p class="block__subtitle">Короткие волосы</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- Брови и ресницы -->
                                 <div class="tabs__item">
                                     <div class="block-left">
                                         <div class="block">
@@ -408,6 +415,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Массаж -->
                                 <div class="tabs__item">
                                     <div class="block-left">
                                         <div class="block">
@@ -459,7 +467,7 @@
                     </div>                    
                 </div>
             </section>
-<!-------------------------section masters------------------------->
+<!-------------------------section masters----------------------->
             <section class="section">
                 <div id="masters" class="section__grey section__grey_masters">
                     <div class="container">
@@ -524,7 +532,7 @@
                     </div>
                 </div>
             </section>
-<!-------------------------section portfolio------------------------->
+<!-------------------------section portfolio--------------------->
             <section id="portfolio" class="section">
                 <div class="container">
                     <div class="section__header section__header_stretch">
@@ -543,7 +551,6 @@
                             <a data-fancybox="gallery" href="img/slid-1-big.png">
                                 <div class="slid__overlay"></div>
                                 <img class="slid__img img" src="img/slid-1.png" alt="Ирина">
-                                <!-- <div class="slid__btn">Увеличить</div> -->
                             </a>
                         </div>
                         <div class="slid scale">
@@ -573,24 +580,24 @@
                     </div>
                 </div>
             </section>
-<!-------------------------section brends------------------------->
+<!-------------------------section brends------------------------>
             <section class="section">
                 <div class="container">
                     <div class="section__header">
                         <p class="section__subtitle brend-title">Бренды, которые мы используем в работе</p>
                     </div>
                     <div class="section__inner">
-                        <div class="brends section__brend">
-                            <div class="row_brend"><img src="img/wella.png" alt="wella" class="brends__icon"></div>
-                            <div class="row_brend"><img src="img/schwarzkopf.png" alt="schwarzkopf" class="brends__icon"></div>
-                            <div class="row_brend"><img src="img/tigi.png" alt="tigi" class="brends__icon"></div>
-                            <div class="row_brend"><img src="img/londa.png" alt="londa" class="brends__icon"></div>
-                            <div class="row_brend"><img src="img/nioxin.png" alt="nioxin" class="brends__icon"></div>
+                        <div class="brends">
+                            <div class="brends__row"><img src="img/wella.png" alt="wella" class="brends__icon"></div>
+                            <div class="brends__row"><img src="img/schwarzkopf.png" alt="schwarzkopf" class="brends__icon"></div>
+                            <div class="brends__row"><img src="img/tigi.png" alt="tigi" class="brends__icon"></div>
+                            <div class="brends__row"><img src="img/londa.png" alt="londa" class="brends__icon"></div>
+                            <div class="brends__row"><img src="img/nioxin.png" alt="nioxin" class="brends__icon"></div>
                         </div>
                     </div>
                 </div>
             </section>
-<!-------------------------section contacts, form------------------------->
+<!-------------------------section contacts, form---------------->
             <section id="contacts" class="section-bottom">
                 <div class="section__grey section__grey_contacts">
                     <div class="container-contacts">
@@ -617,11 +624,11 @@
                                         <div class="column">
                                             <h3 class="column__title">Быстрая запись</h3>
                                             <p class="column__subtitle contacts-bottom">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
-                                            <form action="post" class="column__form">
-                                                <input type="text" placeholder="Ваше имя" class="column__imput">
-                                                <input type="text" placeholder="+7 (___) ___-__-__" class="column__imput">
-                                            </form>
-                                            <button class="btn btn_form">Записаться</button>
+                                            <form id="form" action="post" class="column__form">
+                                                <input type="text" name="name" placeholder="Ваше имя" class="column__imput" required>
+                                                <input type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" class="column__imput" required>
+                                                <button class="btn btn_form but-effect">Записаться</button>
+                                             </form>
                                             <p class="column__police">Нажимая на кнопку вы соглашаетесь с 
                                                 <a href="#" class="column__blue">обработкой персональных данных</a>
                                             </p>                                        
@@ -634,7 +641,7 @@
                 </div>
             </section>  
         </main>
-<!-------------------------section footer------------------------->
+<!-------------------------section footer------------------------>
         <footer class="footer">
             <div class="container">
                 <div class="footer-inner">
@@ -656,17 +663,13 @@
             </div>
         </footer>
     </div>
-<!--------------------------------scripts------------------------->
+<!-------------------------scripts------------------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script src="./js/mobile-menu.js"></script>
 <script src="./js/slick.js"></script>
 <script src="./js/bar-menu.js"></script>
-<script src="./js/expan-text.js"></script>
-<script src="./js/smooth-scroll.js"></script>
-<!-- <script src="./js/tabs.js"></script> -->
-<!-- <script src="./js/form.js"></script> -->
-
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>

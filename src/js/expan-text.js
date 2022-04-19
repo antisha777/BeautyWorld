@@ -3,20 +3,20 @@ const TogglePhrases = {
     Expand: 'Развернуть' 
 }; 
 
-class ExpandableText { 
-  constructor(elem, maxLength = 150) { 
-    this.maxLength = maxLength; 
-    this.elem = elem;     
-    this.originalText = elem.textContent; 
+export class ExpandableText { 
+    constructor(elem, maxLength = 150) { 
+      this.maxLength = maxLength; 
+      this.elem = elem;     
+      this.originalText = elem.textContent; 
      
-    this.isToggle = false; 
+      this.isToggle = false; 
      
-    this.toggleBtn = document.createElement('button'); 
-    this.toggleBtn.textContent = TogglePhrases.Expand; 
-    this.toggleBtn.addEventListener('click', () => this.toggle()); 
+      this.toggleBtn = document.createElement('button'); 
+      this.toggleBtn.textContent = TogglePhrases.Expand; 
+      this.toggleBtn.addEventListener('click', () => this.toggle()); 
      
-    this.elem.textContent = this._getShortText(); 
-    this.elem.append(this.toggleBtn); 
+      this.elem.textContent = this._getShortText(); 
+      this.elem.append(this.toggleBtn); 
   } 
    
   toggle() { 
@@ -37,11 +37,3 @@ class ExpandableText {
     return (this.originalText.slice(0, this.maxLength));
   } 
 } 
-
-window.onload = () => { 
-  const textElems = document.querySelectorAll('.expandable-text'); 
-   
-  for (const el of textElems) { 
-    new ExpandableText(el, 362); 
-  } 
-}

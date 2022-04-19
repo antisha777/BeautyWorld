@@ -22,13 +22,13 @@ class TabItem {
   } 
 } 
 
-class TabsManager { 
-  constructor(tabsElem) { 
-    this.tabs = []; 
-    this.activeTab = null; 
+export class TabsManager { 
+    constructor(tabsElem) { 
+      this.tabs = []; 
+      this.activeTab = null; 
      
-    this.init(tabsElem);     
-    this.activateTab(this.tabs[0]); 
+      this.init(tabsElem);     
+      this.activateTab(this.tabs[0]); 
   } 
    
   init(tabsElem) { 
@@ -49,10 +49,13 @@ class TabsManager {
     } 
     this.activeTab = tab; 
     this.activeTab.activate(); 
-  } 
-} 
+  }
+  
+  activateTabByIndex(index) {
+    const tab = this.tabs[index] !== undefined;
 
-window.onload = function() { 
-  const tabsElem = document.getElementById('myTabs'); 
-  new TabsManager(tabsElem); 
-}
+    if (tab) {
+       this.activateTab(this.tabs[index]);
+    }
+ }
+} 
