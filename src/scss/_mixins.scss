@@ -4,8 +4,20 @@
     }
 }
 
+@mixin _1165 {
+    @media only screen and (max-width: 1165px)  { 
+        @content;
+    }
+}
+
 @mixin _992 {
     @media only screen and (max-width: 992px) { 
+        @content;
+    }
+}
+
+@mixin _811 {
+    @media only screen and (max-width: 811px) { 
         @content;
     }
 }

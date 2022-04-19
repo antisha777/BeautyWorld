@@ -6,10 +6,6 @@
 } 
 /* Small Devices, Tablets */ 
 @media only screen and (max-width: 768px) {
-
-    .header__top {
-        padding: 0 15px 0 70px;
-    }
     
     .hero__social {
         margin-top: 20px;
@@ -41,16 +37,6 @@
         padding-top: 20px;
     }
     
-    .header__top {
-        flex-direction: column;
-        padding: 0 15px;
-        margin-bottom: 60px;
-    }
-
-    .header__mobile {
-        top: 40px;
-    }
-
     .logo {
         padding-bottom: 20px;
     }
@@ -62,7 +48,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .burger, .hero__social {
+    .mobile-menu, .hero__social, .white-stripe {
         display: none;
     }
 }
