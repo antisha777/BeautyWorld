@@ -1,6 +1,8 @@
 import { TabsManager } from './tabs.js';
 import { ExpandableText } from './expan-text.js';
 
+import './slick.js';
+
 window.onload = () =>  {
 
     // Form
@@ -53,3 +55,27 @@ window.onload = () =>  {
   }
     
 }
+// Caruosel
+
+// $(document).ready(function() {
+//     $('.slider').slick({
+//         slidesToShow: 4,
+//         prevArrow: '.switch__prev',
+//         nextArrow: '.switch__next'
+//     });
+// });
+
+//Mobile-menu
+
+$(".mobile-menu").click(function() {
+	$(this).toggleClass("mobile-menu-active");
+  });
+
+//Mobile-bar
+
+window.addEventListener('scroll',(event) => {
+  const elem = document.getElementById('bar');
+  const y = scrollY;
+  if (y<100) { elem.style.display = "none"}
+  else { elem.style.display = "block"};
+});

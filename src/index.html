@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 </head>
@@ -662,14 +662,40 @@
                 </div>
             </div>
         </footer>
+        <section-form>
+            <form id="order-form" action="">
+                <div class="form-control">
+                    <label for="">Ваше имя:</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-control">
+                    <label for="">Намер телефона:</label>
+                    <input type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-control">
+                    <label for="">Выберите мастера:</label>
+                    <select name="masterId">
+                        <option value="">Не выбран</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="">Выберите услугу:</label>
+                    <select name="serviceId">
+                        <option value="">Не выбрана</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="">Дата визита</label>
+                    <input type="date">
+                </div>
+                <button type="submit">Записаться</button>
+            </form>
+        </section-form>
     </div>
 <!-------------------------scripts------------------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="./js/mobile-menu.js"></script>
-<script src="./js/slick.js"></script>
-<script src="./js/bar-menu.js"></script>
-<script type="module" src="./js/main.js"></script>
+<script src="./main.min.js"></script>
 </body>
 </html>
