@@ -1,10 +1,13 @@
-import { TabsManager } from './tabs.js';
-import { ExpandableText } from './expan-text.js';
+import { TabsManager } from './tabs';
+import { ExpandableText } from './expan-text';
+import { OrderForm } from './forms/order-form';
+import $ from 'jquery';
 
-import './slick.js';
+// import './slick.js';
 
 window.onload = () =>  {
 
+    
     // Form
 
     const form = document.getElementById('form');
@@ -52,24 +55,34 @@ window.onload = () =>  {
    
     for (const el of textElems) { 
     new ExpandableText(el, 362); 
+    
   }
     
 }
-// Caruosel
-
-// $(document).ready(function() {
-//     $('.slider').slick({
-//         slidesToShow: 4,
-//         prevArrow: '.switch__prev',
-//         nextArrow: '.switch__next'
-//     });
-// });
 
 //Mobile-menu
 
-$(".mobile-menu").click(function() {
+$(".mobile-menu").click(function () {
 	$(this).toggleClass("mobile-menu-active");
-  });
+});
+
+// Slick
+
+  $(document).ready(function() {
+    $('.slider').slick({
+        slidesToShow: 4,
+        prevArrow: '.switch__prev',
+        nextArrow: '.switch__next'
+    });
+});
+
+// Order-form
+
+function init() {
+  new OrderForm();
+}
+
+$(document).ready(init);
 
 //Mobile-bar
 
