@@ -12,9 +12,13 @@ class ApiService extends HttpService {
         return this.get('staff');
     }
 
+    // Возвращает список услуг
+
     getServices() {
         return this.get('services');
     }
+
+    // Отправляет форму записи
 
     createOrder(orderData) {
         return this.post('orders', orderData);

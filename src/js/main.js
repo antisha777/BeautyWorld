@@ -1,30 +1,10 @@
 import { TabsManager } from './tabs';
 import { ExpandableText } from './expan-text';
 import { OrderForm } from './forms/order-form';
+import { MinOrder } from './forms/min-form';
 import $ from 'jquery';
 
-// import './slick.js';
-
 window.onload = () =>  {
-
-    
-    // Form
-
-    const form = document.getElementById('form');
-
-	form.addEventListener('submit', event => {
-		event.preventDefault();
-
-		const formData = Array
-			.from(event.target.elements)
-			.filter(el => el.name)
-			.map(el => {
-			const {value, name} = el;
-			return { [name] : value};
-			});
-
-			console.log(formData);
-	});
 
     // Scroll
 
@@ -56,8 +36,7 @@ window.onload = () =>  {
     for (const el of textElems) { 
     new ExpandableText(el, 362); 
     
-  }
-    
+  }  
 }
 
 //Mobile-menu
@@ -72,14 +51,19 @@ $(".mobile-menu").click(function () {
     $('.slider').slick({
         slidesToShow: 4,
         prevArrow: '.switch__prev',
-        nextArrow: '.switch__next'
+        nextArrow: '.switch__next'        
     });
+
+    //Inputmask
+
+    Inputmask().mask(document.querySelectorAll("input"));    
 });
 
 // Order-form
 
 function init() {
   new OrderForm();
+  new MinOrder();
 }
 
 $(document).ready(init);
@@ -92,3 +76,4 @@ window.addEventListener('scroll',(event) => {
   if (y<100) { elem.style.display = "none"}
   else { elem.style.display = "block"};
 });
+

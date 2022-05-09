@@ -52,7 +52,7 @@
                     <div class="hero header__hero">
                         <h1 class="hero__title">Создай свой образ вместе с нами</h1>
                         <p class="hero__subtitle">Идеальный образ за 60 минут</p>
-                        <button data-fancybox href="#order-form" class="btn btn_large but-effect">Записаться онлайн</button>
+                        <button data-fancybox data-src="#order-form" class="btn btn_large but-effect">Записаться онлайн</button>
                         <div class="hero__social">
                             <ul class="social social_horizon">
                                 <li class="social__item"><a href="#"><img class="social__link" src="./img/vk.png" alt="Vk"></a></li>
@@ -624,11 +624,18 @@
                                         <div class="column">
                                             <h3 class="column__title">Быстрая запись</h3>
                                             <p class="column__subtitle contacts-bottom">Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время.</p>
-                                            <form id="form" action="post" class="column__form">
+                                            <form id="form" action="post" class="column__form form__input">
                                                 <input type="text" name="name" placeholder="Ваше имя" class="column__imput" required>
-                                                <input type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" class="column__imput" required>
+                                                <input data-inputmask="'mask': '+7 (999) 999-99-99'" type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" class="column__imput" required>
+                                                <div class="loader-show loader-show_hide" id="loader"></div>
+                                                <div class="form__message" id="succes" hidden>
+					                                <p>Заявка отправлена!</p>
+				                                </div>
+				                                <div class="form__message" id="unsucces" hidden>
+					                                <p>Что-то пошло не так, попробуйте еще раз</p>
+				                                </div>
                                                 <button class="btn btn_form but-effect">Записаться</button>
-                                             </form>
+                                            </form>
                                             <p class="column__police">Нажимая на кнопку вы соглашаетесь с 
                                                 <a href="#" class="column__blue">обработкой персональных данных</a>
                                             </p>                                        
@@ -662,33 +669,41 @@
                 </div>
             </div>
         </footer>
+<!-------------------------modal form---------------------------->        
         <section-form>
-            <form id="order-form" class="form-fancy">
-                <div class="form-control">
+            <form id="order-form" class="form form__fancy">
+                <div class="form__control">
                     <label>Ваше имя:</label>
-                    <input type="text" name="name" required>
+                    <input class="column-red" type="text" name="name" required>
                 </div>         
-                <div class="form-control">
+                <div class="form__control">
                     <label>Номер телефона:</label>
-                    <input type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+                    <input class="column-red" data-inputmask="'mask': '+7 (999) 999-99-99'" type="tel" name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
                 </div>           
-                <div class="form-control">
+                <div class="form__control">
                     <label>Выберите мастера:</label>            
                     <select name="masterId">
                         <option value="">Не выбран</option>
                     </select>
                 </div>           
-                <div class="form-control">
+                <div class="form__control">
                     <label>Выберите услугу:</label>
                     <select name="serviceId">
                         <option value="">Не выбран</option>
                     </select>
                 </div>
-                <div class="form-control">
+                <div class="form__control">
                     <label>Дата визита:</label>
-                    <input type="date" name="visitDate">
+                    <input class="form__input" type="date" name="visitDate">
                 </div>
-                <button>Записаться</button>
+                <button class="btn btn_large but-effect">Записаться</button>
+                <div class="loader-show loader-show_hide" id="loader"></div>
+                <div class="form__message" id="success" hidden>
+					<p>Заявка отправлена! Наш менеджер свяжется с Вами в ближайшее время.</p>
+				</div>
+				<div class="form__message" id="unsuccess" hidden>
+					<p>Что-то пошло не так, попробуйте еще раз</p>
+				</div>
             </form>
         </section-form>
     </div>

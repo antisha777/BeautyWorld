@@ -19,6 +19,7 @@
   "homepage": "https://github.com/antisha777/BeautyWorld#readme",
   "dependencies": {
     "@fancyapps/ui": "^4.0.26",
+    "inputmask": "^5.0.7",
     "jquery.fancybox": "^2.1.5",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
