@@ -1,0 +1,47 @@
+{
+  "name": "beautyworld",
+  "version": "1.0.0",
+  "description": "BeautyWorld",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antisha777/BeautyWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antisha777/BeautyWorld/issues"
+  },
+  "homepage": "https://github.com/antisha777/BeautyWorld#readme",
+  "dependencies": {
+    "@fancyapps/ui": "^4.0.26",
+    "inputmask": "^5.0.7",
+    "jquery.fancybox": "^2.1.5",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.9",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.1.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.12",
+    "sass": "^1.49.9",
+    "webpack": "^5.72.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
